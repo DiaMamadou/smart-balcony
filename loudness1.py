@@ -95,17 +95,15 @@ gpg = easy.EasyGoPiGo3()
 leson = gpg.init_loudness_sensor('AD1')
 
 valuess
-# start
+
 start_time = time.time()
-f=open("/media/DISK_IMG/valeursRetournees.txt", "w")
+
+f=open("/media/DISK_IMG/valeursRetournees.txt", "w")    #ouverture en mode écriture du fichier dans lequel on va écrire 
 while time.time() - start_time < 1:
-    value = leson.read()
-    #value_percentage = leson.percent_read()
-    #values = values+"\n"+value
+    donnees_son = leson.read()  #lecture des données retournées par le capteur
     
-    values = str(value)
-    valuess = valuess +"\n"+values
-f.write(valuess)
-f.close()
-    #sleep(30)
-#-----
+    chaine = str(donnees_son)   #cast des données en chaine de caractère
+    chaine2 = chaine2 +"\n"+chaine2  #ajout de la nouvelle chaine à la ligne
+f.write(chaine2)    #écriture de la chaine dans le fichier
+f.close()   #fermeture du fichier
+

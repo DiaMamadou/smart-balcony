@@ -1,4 +1,4 @@
-import easygopigo3 as easy
+	import easygopigo3 as easy
 # create an EasyGoPiGo3 object
 gpg = easy.EasyGoPiGo3()
 # and now instantiate a LoudnessSensor object through the gpg3_obj object

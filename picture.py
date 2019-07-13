@@ -5,15 +5,15 @@ raspi_camera = easypicamera.EasyCamera()
 
 sensor_readings = None
 
-gpg = easy.EasyGoPiGo3()
+gpg = easy.EasyGoPiGo3() #instanciation de la classe GoPiGo
 
-'photo_folder'
+'dossier_photo'
 
 photo_count = 1
 
 
-easypicamera.create_folder_on_usb('photo_folder')
+easypicamera.create_folder_on_usb('dossier_photo') #création d'un dossier
 
-raspi_camera.take_photo('photo_folder'+'/'+'photo_3_'+str(photo_count)+'.jpg')
+raspi_camera.take_photo('dossier_photo'+'/'+'photo_3_'+str(photo_prise)+'.jpg') #prise d'une photo
 
-photo_count = photo_count + 1
+photo_prise = photo_prise + 1 #incrémentation pour le nommage des photos
